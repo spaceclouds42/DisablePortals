@@ -6,6 +6,7 @@
   "mixins": [
     "EndGatewayBlockEntityMixin",
     "EndPortalBlockMixin",
+    "EnterBlockCriterionMixin",
     "NetherPortalBlockMixin"
   ],
   "client": [
