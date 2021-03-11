@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "disableportals",
   "version": "${version}",
-  "name": "DisablePortals",
+  "name": "Disable Portals",
   "description": "Adds a simple command for disabling nether and end portals separately.",
   "authors": [
     "SpaceClouds42"
