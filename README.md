@@ -14,15 +14,9 @@ portals.
 
 ### Config Usage
 Your config should auto generate and look like this
-```json
-{
-  "main": {
-    "disableNetherPortals": false,
-    "disableEndPortals": false,
-    "disableEndGateways": false
-  }
-}
-```
+
+![config file screenshot](https://media.discordapp.net/attachments/819612740736778291/819655485379837992/unknown.png)
+
 By default, no portals are disabled. To disable nether
 portals through the config, set `disableNetherPortals` to 
 true. If you make changes to the config while the game is
