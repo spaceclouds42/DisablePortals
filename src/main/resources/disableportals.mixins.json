@@ -4,6 +4,7 @@
   "package": "us.spaceclouds42.disableportals.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "EndGatewayBlockEntityMixin",
     "EndPortalBlockMixin",
     "NetherPortalBlockMixin"
   ],

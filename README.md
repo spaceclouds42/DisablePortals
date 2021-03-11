@@ -18,7 +18,8 @@ Your config should auto generate and look like this
 {
   "main": {
     "disableNetherPortals": false,
-    "disableEndPortals": false
+    "disableEndPortals": false,
+    "disableEndGateways": false
   }
 }
 ```

@@ -18,6 +18,7 @@ public class Config {
     public static class Main {
         public boolean disableNetherPortals = false;
         public boolean disableEndPortals = false;
+        public boolean disableEndGateways = false;
     }
 
     public final Config.Main main = new Main();
