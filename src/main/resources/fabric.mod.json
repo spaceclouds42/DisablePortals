@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "disableportals",
+  "version": "${version}",
+  "name": "DisablePortals",
+  "description": "Adds a simple command for disabling nether and end portals separately.",
+  "authors": [
+    "SpaceClouds42"
+  ],
+  "contact": {
+    "repo": "https://github.com/SpaceClouds42/DisablePortals"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/disableportals/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "us.spaceclouds42.disableportals.DisablePortals"
+    ]
+  },
+  "mixins": [
+    "disableportals.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.2",
+    "minecraft": "1.16.5"
+  }
+}
