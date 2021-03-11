@@ -18,7 +18,7 @@ public class DisablePortalsCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(
             literal("disableportals")
-                .requires(source -> source.hasPermissionLevel(4))
+                .requires(source -> source.hasPermissionLevel(2))
                 .then(CommandManager.literal("allowNether")
                         .then(CommandManager.argument("enable", BoolArgumentType.bool())
                                 .executes(ctx -> setNetherPortals(ctx.getSource(), BoolArgumentType.getBool(ctx, "enable")))
