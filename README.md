@@ -12,14 +12,15 @@ operators.
 `disableportals reloadConfig` - reloads the config file, 
 located in `config/DisablePortals.json`
 
-`disableportals (netherAllowed|endAllowed|endGatewaysAllowed) (true|false)` - 
-sets the selected dimension's portals to work or not to work.
-Ex: `disableportals endAllowed false` will turn off end 
-portals.
+`disableportals (netherAllowed|endAllowed|endGatewaysAllowed)
+(true|false)` - sets the selected dimension's portals to work
+or not to work.Ex: `disableportals endAllowed false` will
+turn off end portals.
 
 
 ## Config Usage
-A config file (`config/DisablePortals.json`) will auto generate and look like this
+A config file (`config/DisablePortals.json`) will auto 
+generate and look like this
 
 ![config file screenshot][Config]
 
@@ -27,6 +28,7 @@ By default, no portals are disabled. To disable nether
 portals through the config, set `disableNetherPortals` to 
 true. If you make changes to the config while the game is
 running, you will have to run `disableportals reloadConfig`
+for the changes to take effect.
 
 <br>
 
