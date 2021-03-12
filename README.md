@@ -3,28 +3,47 @@ A simple mod that allows for the disabling of nether portals
 and end portals. It adds the `disableportals` command for all
 operators.
 
-### Command Usage
+<br>
+
+![screenshot example][Ex disableEndPortals]
+![screenshot example][Ex disableEndGateways]
+
+## Command Usage
 `disableportals reloadConfig` - reloads the config file, 
 located in `config/DisablePortals.json`
 
-`disableportals (netherAllowed|endAllowed) (true|false)` - 
+`disableportals (netherAllowed|endAllowed|endGatewaysAllowed) (true|false)` - 
 sets the selected dimension's portals to work or not to work.
 Ex: `disableportals endAllowed false` will turn off end 
 portals.
 
-### Config Usage
-Your config should auto generate and look like this
 
-![config file screenshot](https://media.discordapp.net/attachments/819612740736778291/819655485379837992/unknown.png)
+## Config Usage
+A config file (`config/DisablePortals.json`) will auto generate and look like this
+
+![config file screenshot][Config]
 
 By default, no portals are disabled. To disable nether
 portals through the config, set `disableNetherPortals` to 
 true. If you make changes to the config while the game is
 running, you will have to run `disableportals reloadConfig`
 
-<a href="https://modrinth.com/mod/fabric-api">
-    <img width="200" alt="Requires Fabric API" src="https://i.imgur.com/HabVZJR.png">
-</a>
-<a href="https://discord.gg/D7TjNrArMw">
-    <img width="200" alt="Join the Discord for support" src="https://discord.com/assets/bb408e0343ddedc0967f246f7e89cebf.svg">
-</a>
+<br>
+
+<!-- Badges -->
+[![Fabric API Badge][Fabric API Badge]][Fabric API Download]
+
+[![Join the Discord for support][Discord Badge]][Discord Invite]
+
+
+<!-- Image URLs -->
+[Ex disableEndPortals]: https://media.discordapp.net/attachments/819612740736778291/819730605943554048/unknown.png
+[Ex disableEndGateways]: https://media.discordapp.net/attachments/819612740736778291/819735337240363028/image-1.png4.png
+[Config]: https://media.discordapp.net/attachments/819612740736778291/819655485379837992/unknown.png
+
+[Fabric API Badge]: https://i.imgur.com/HabVZJR.png
+[Discord Badge]: https://discord.com/assets/bb408e0343ddedc0967f246f7e89cebf.svg
+
+<!-- Hyperlink URLs -->
+[Fabric API Download]: https://modrinth.com/mod/fabric-api
+[Discord Invite]: https://discord.gg/D7TjNrArMw
