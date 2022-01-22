@@ -103,6 +103,10 @@ $RECYCLE.BIN/
 .gradle
 build/
 
+#preinstalled java
+#use gradlew %any_command% -Dorg.gradle.java.home=./java
+java
+
 # Ignore Gradle GUI config
 gradle-app.setting
 
