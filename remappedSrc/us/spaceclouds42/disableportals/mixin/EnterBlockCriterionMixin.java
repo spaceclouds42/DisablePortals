@@ -1,30 +1,27 @@
 package us.spaceclouds42.disableportals.mixin;
 
+import net.minecraft.advancement.criterion.EnterBlockCriterion;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.NetherPortalBlock;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import us.spaceclouds42.disableportals.DisablePortals;
 
-@Mixin(NetherPortalBlock.class)
-abstract class NetherPortalBlockMixin {
+@Mixin(EnterBlockCriterion.class)
+abstract class EnterBlockCriterionMixin {
     @Inject(
-            method = "onEntityCollision",
+            method = "trigger",
             at = @At(
                     value = "HEAD"
             ),
             cancellable = true
     )
-    private void disableNetherPortal(BlockState state, World world, BlockPos pos, Entity entity, CallbackInfo ci) {
-        if (DisablePortals.CONF.main.disableNetherPortals) {
+    private void preventGatewayAdvancement(ServerPlayerEntity player, BlockState state, CallbackInfo ci) {
+        if (state.getBlock() == Blocks.END_GATEWAY && DisablePortals.CONF.main.disableEndGateways) {
             ci.cancel();
         }
     }

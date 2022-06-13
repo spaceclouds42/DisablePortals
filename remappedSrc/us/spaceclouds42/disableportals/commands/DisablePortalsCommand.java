@@ -5,14 +5,15 @@ import com.mojang.brigadier.arguments.BoolArgumentType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.text.LiteralTextContent;
 import net.minecraft.util.Formatting;
-import net.minecraft.text.Text;
 import us.spaceclouds42.disableportals.Config;
 import us.spaceclouds42.disableportals.DisablePortals;
 
 import java.io.File;
 
 import static net.minecraft.server.command.CommandManager.literal;
+
 public class DisablePortalsCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(
@@ -55,14 +56,20 @@ public class DisablePortalsCommand {
 
         if (enable) {
             source.sendFeedback(
-                    Text.translatable("disableportals.nether_enable").formatted(Formatting.GREEN), false
+                    new LiteralTextContent("Enabled nether portals").formatted(
+                            Formatting.GREEN
+                    ),
+                    false
             );
         } else {
             source.sendFeedback(
-                    Text.translatable("disableportals.nether_disable").formatted(Formatting.RED),
+                    new LiteralTextContent("Disabled nether portals").formatted(
+                            Formatting.RED
+                    ),
                     false
             );
         }
+
         return 1;
     }
 
@@ -72,11 +79,17 @@ public class DisablePortalsCommand {
 
         if (enable) {
             source.sendFeedback(
-                    Text.translatable("disableportals.end_enable").formatted(Formatting.GREEN), false
+                    new LiteralTextContent("Enabled end portals").formatted(
+                            Formatting.GREEN
+                    ),
+                    false
             );
         } else {
             source.sendFeedback(
-                    Text.translatable("disableportals.end_disable").formatted(Formatting.RED), false
+                    new LiteralTextContent("Disabled end portals").formatted(
+                            Formatting.RED
+                    ),
+                    false
             );
         }
 
@@ -89,11 +102,17 @@ public class DisablePortalsCommand {
 
         if (enable) {
             source.sendFeedback(
-                    Text.translatable("disableportals.endgw_enable").formatted(Formatting.GREEN), false
+                    new LiteralTextContent("Enabled end gateways").formatted(
+                            Formatting.GREEN
+                    ),
+                    false
             );
         } else {
             source.sendFeedback(
-                    Text.translatable("disableportals.endgw_disable").formatted(Formatting.RED), false
+                    new LiteralTextContent("Disabled end gateways").formatted(
+                            Formatting.RED
+                    ),
+                    false
             );
         }
 
@@ -104,7 +123,10 @@ public class DisablePortalsCommand {
         DisablePortals.CONF = Config.loadConfig(new File(FabricLoader.getInstance().getConfigDir() + "/DisablePortals.json"));
 
         source.sendFeedback(
-                Text.translatable("disableportals.reloadconfig").formatted(Formatting.GREEN), false
+                new LiteralTextContent("Reloaded the config file!").formatted(
+                        Formatting.GREEN
+                ),
+                false
         );
 
         return 1;

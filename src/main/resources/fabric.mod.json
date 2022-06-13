@@ -5,7 +5,8 @@
   "name": "Disable Portals",
   "description": "Adds a simple command for disabling nether and end portals separately.",
   "authors": [
-    "SpaceClouds42"
+    "SpaceClouds42",
+    "PHELMS"
   ],
   "contact": {
     "repo": "https://github.com/SpaceClouds42/DisablePortals"
@@ -22,7 +23,9 @@
     "disableportals.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.11.2",
-    "minecraft": "1.16.5"
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
   }
 }

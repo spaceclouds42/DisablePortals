@@ -29,7 +29,7 @@ public class Config {
             try(
                     FileInputStream fileInputStream = new FileInputStream(configFile);
                     InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, StandardCharsets.UTF_8);
-                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader)
+                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             ) {
                 config = GSON.fromJson(bufferedReader, Config.class);
             }
