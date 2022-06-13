@@ -47,5 +47,4 @@ for the changes to take effect.
 [Discord Badge]: https://discord.com/assets/cb48d2a8d4991281d7a6a95d2f58195e.svg
 
 <!-- Hyperlink URLs -->
-[Fabric API Download]: https://modrinth.com/mod/fabric-api
-[Discord Invite]: https://discord.gg/D7TjNrArMw
+[Fabric API Download]: https://modrinth.com/mod/fabric-api 
