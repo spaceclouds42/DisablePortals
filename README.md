@@ -34,7 +34,6 @@ for the changes to take effect.
 
 <!-- Badges -->
 [![Fabric API Badge][Fabric API Badge]][Fabric API Download]
-
 [![Join the Discord for support][Discord Badge]][Discord Invite]
 
 
