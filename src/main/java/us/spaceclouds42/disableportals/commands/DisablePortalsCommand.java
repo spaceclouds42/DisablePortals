@@ -55,11 +55,11 @@ public class DisablePortalsCommand {
 
         if (enable) {
             source.sendFeedback(
-                    Text.translatable("disableportals.nether_enable").formatted(Formatting.GREEN), false
+                    Text.literal ("Enabled Nether portals").formatted(Formatting.GREEN), false
             );
         } else {
             source.sendFeedback(
-                    Text.translatable("disableportals.nether_disable").formatted(Formatting.RED),
+                    Text.literal ("Disabled Nether portals").formatted(Formatting.RED),
                     false
             );
         }
@@ -72,11 +72,11 @@ public class DisablePortalsCommand {
 
         if (enable) {
             source.sendFeedback(
-                    Text.translatable("disableportals.end_enable").formatted(Formatting.GREEN), false
+                    Text.literal ("Enabled End portals").formatted(Formatting.GREEN), false
             );
         } else {
             source.sendFeedback(
-                    Text.translatable("disableportals.end_disable").formatted(Formatting.RED), false
+                    Text.literal ("Enabled End portals").formatted(Formatting.RED), false
             );
         }
 
@@ -89,11 +89,11 @@ public class DisablePortalsCommand {
 
         if (enable) {
             source.sendFeedback(
-                    Text.translatable("disableportals.endgw_enable").formatted(Formatting.GREEN), false
+                    Text.literal("Enabled End Gateway Portals").formatted(Formatting.GREEN), false
             );
         } else {
             source.sendFeedback(
-                    Text.translatable("disableportals.endgw_disable").formatted(Formatting.RED), false
+                    Text.translatable("Disabled End Gateway Portals").formatted(Formatting.RED), false
             );
         }
 
@@ -104,7 +104,7 @@ public class DisablePortalsCommand {
         DisablePortals.CONF = Config.loadConfig(new File(FabricLoader.getInstance().getConfigDir() + "/DisablePortals.json"));
 
         source.sendFeedback(
-                Text.translatable("disableportals.reloadconfig").formatted(Formatting.GREEN), false
+                Text.translatable("Configuration Reloaded!").formatted(Formatting.GREEN), false
         );
 
         return 1;

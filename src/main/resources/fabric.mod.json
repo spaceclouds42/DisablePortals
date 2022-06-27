@@ -5,7 +5,9 @@
   "name": "Disable Portals",
   "description": "Adds a simple command for disabling nether and end portals separately.",
   "authors": [
-    "SpaceClouds42",
+    "SpaceClouds42"
+  ],
+  "contributors": [
     "PHELMS"
   ],
   "contact": {
