@@ -5,7 +5,8 @@ import com.mojang.brigadier.arguments.BoolArgumentType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import us.spaceclouds42.disableportals.Config;
 import us.spaceclouds42.disableportals.DisablePortals;
@@ -55,19 +56,11 @@ public class DisablePortalsCommand {
         DisablePortals.CONF.saveConfig(new File(FabricLoader.getInstance().getConfigDir() + "/DisablePortals.json"));
 
         if (enable) {
-            source.sendFeedback(
-                    new LiteralText("Enabled nether portals").formatted(
-                            Formatting.GREEN
-                    ),
-                    false
-            );
+            MutableText feedback = Text.literal("Enabled nether portals").formatted(Formatting.GREEN);
+            source.sendFeedback(() -> feedback, false);
         } else {
-            source.sendFeedback(
-                    new LiteralText("Disabled nether portals").formatted(
-                            Formatting.RED
-                    ),
-                    false
-            );
+            MutableText feedback = Text.literal("Disabled nether portals").formatted(Formatting.RED);
+            source.sendFeedback(() -> feedback, false);
         }
 
         return 1;
@@ -78,19 +71,11 @@ public class DisablePortalsCommand {
         DisablePortals.CONF.saveConfig(new File(FabricLoader.getInstance().getConfigDir() + "/DisablePortals.json"));
 
         if (enable) {
-            source.sendFeedback(
-                    new LiteralText("Enabled end portals").formatted(
-                            Formatting.GREEN
-                    ),
-                    false
-            );
+            MutableText feedback = Text.literal("Enabled end portals").formatted(Formatting.GREEN);
+            source.sendFeedback(() -> feedback, false);
         } else {
-            source.sendFeedback(
-                    new LiteralText("Disabled end portals").formatted(
-                            Formatting.RED
-                    ),
-                    false
-            );
+            MutableText feedback = Text.literal("Disabled end portals").formatted(Formatting.RED);
+            source.sendFeedback(() -> feedback, false);
         }
 
         return 1;
@@ -101,19 +86,11 @@ public class DisablePortalsCommand {
         DisablePortals.CONF.saveConfig(new File(FabricLoader.getInstance().getConfigDir() + "/DisablePortals.json"));
 
         if (enable) {
-            source.sendFeedback(
-                    new LiteralText("Enabled end gateways").formatted(
-                            Formatting.GREEN
-                    ),
-                    false
-            );
+            MutableText feedback = Text.literal("Enabled end gateways").formatted(Formatting.GREEN);
+            source.sendFeedback(() -> feedback, false);
         } else {
-            source.sendFeedback(
-                    new LiteralText("Disabled end gateways").formatted(
-                            Formatting.RED
-                    ),
-                    false
-            );
+            MutableText feedback = Text.literal("Disabled end gateways").formatted(Formatting.RED);
+            source.sendFeedback(() -> feedback, false);
         }
 
         return 1;
@@ -122,12 +99,8 @@ public class DisablePortalsCommand {
     private static int reloadConfig(ServerCommandSource source) {
         DisablePortals.CONF = Config.loadConfig(new File(FabricLoader.getInstance().getConfigDir() + "/DisablePortals.json"));
 
-        source.sendFeedback(
-                new LiteralText("Reloaded the config file!").formatted(
-                        Formatting.GREEN
-                ),
-                false
-        );
+        MutableText feedback = Text.literal("Reloaded the config file!").formatted(Formatting.GREEN);
+        source.sendFeedback(() -> feedback, false);
 
         return 1;
     }
