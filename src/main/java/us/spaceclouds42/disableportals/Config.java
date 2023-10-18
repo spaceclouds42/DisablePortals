@@ -21,7 +21,7 @@ public class Config {
         public boolean disableEndGateways = false;
     }
 
-    public final Config.Main main = new Main();
+    public final Main main = new Main();
 
     public static Config loadConfig(File configFile) {
         Config config;
